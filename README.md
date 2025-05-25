@@ -27,7 +27,25 @@ dotnet pack Play.Catalog\src\Play.Catalog.Contracts\ --configuration Release -p:
 dotnet nuget push Packages\$packageName.$version.nupkg --api-key $gh_pat --source "github"
 ```
 
+## Build the docker image
+```sh
+$env:GH_OWNER="microservices-dotnetcore"
+$env:GH_PAT="[PAT HERE]"
+$version="1.0.0"
+docker build --secret id=GH_OWNER --secret id=GH_PAT -t play.catalog:$version .
+```
+
+## Run the docker image
+```sh
+$version="1.0.0"
+docker run -it --rm -p 5000:5000 --name catalog `
+  -e MongoDbSettings__Host=mongo `
+  -e RabbitMQSettings__Host=rabbitmq `
+  --network playinfra_default `
+  play.catalog:$version
+```
+
 ## Requirements
-- .NET 6 or later
+- .NET 9 or later
 
 ---
