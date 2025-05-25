@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <PackageId>Play.Catalog.Contracts</PackageId>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Authors>MirRahman</Authors>
+    <Description>Catalog service contracts</Description>
+  </PropertyGroup>
+
+</Project>

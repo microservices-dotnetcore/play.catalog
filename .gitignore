@@ -1,0 +1,19 @@
+# .gitignore for .NET projects
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.ncrunch*
+*.vscode/
+*.vs/
+*.DS_Store
+*.log
+*.db
+*.pdb
+*.cache
+*.TestResults/
+*.nupkg
+*.snupkg
+*.publish/
