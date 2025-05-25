@@ -14,6 +14,19 @@ This project contains the Catalog service and related contracts for the GameShop
 - `src/Play.Catalog.Service/`
 - `src/Play.Catalog.Contracts/`
 
+## Create and publish contract package
+```sh
+$version="1.0.2"
+$owner="microservices-dotnetcore"
+$packageName="Play.Catalog.Contracts"
+$repoName="play.catalog"
+$gh_pat="[]"
+
+dotnet pack Play.Catalog\src\Play.Catalog.Contracts\ --configuration Release -p:PackageVersion=$version -p:RepositoryUrl=https://github.com/$owner/$repoName -o Packages
+
+dotnet nuget push Packages\$packageName.$version.nupkg --api-key $gh_pat --source "github"
+```
+
 ## Requirements
 - .NET 6 or later
 

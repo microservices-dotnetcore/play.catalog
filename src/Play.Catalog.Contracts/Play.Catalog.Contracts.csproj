@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <PackageId>Play.Catalog.Contracts</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
     <Authors>MirRahman</Authors>
-    <Description>Catalog service contracts</Description>
+    <Description>This project contains the Catalog service contracts for the Game Shop solution.</Description>
+    <Company>Axixur</Company>
   </PropertyGroup>
 
 </Project>
